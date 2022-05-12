@@ -17,8 +17,8 @@ public class PurchaseChecker {
 
     //The database of all article the dispensor can sell. for simplicicty it's just here a static list of articles;
     static Article ar1 = new Article("cocacola_barcode",100);
-    static Article ar2 = new Article("snicker_barcode",1);
-    static Article ar3 = new Article("coffee_barcode",6);
+    static Article ar2 = new Article("snicker_barcode",100);
+    static Article ar3 = new Article("coffee_barcode",60);
     static Article ar4 = new Article("coffee_barcode",6);
     //a static list of article, normally wil be done
     private final static List<Article> articles = Arrays.asList(ar1,ar2, ar3, ar4);

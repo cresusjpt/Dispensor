@@ -28,9 +28,9 @@ public class Dispensor implements  AutoCloseable{
 
     public boolean dispense(Article article){
         int ret = -1;
-        try(this){
+        try(Dispensor dispensor = new Dispensor()){
             String article_str = article.articleToString();
-            String response = this.check(article_str);
+            String response = dispensor.check(article_str);
             ret = Integer.parseInt(response);
         }catch (IOException | TimeoutException | RuntimeException | InterruptedException e) {
             Logger.getLogger(Dispensor.class.getName()).log(Level.SEVERE, null, e);
